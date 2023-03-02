@@ -1,4 +1,4 @@
-# Testando o envio de código
+# Testando o envio de código, com PR.
 nome = input("Informe seu nome: ")
 idade = input("Informe sua idade: ")
 altura = input("Informe sua altura: ")
