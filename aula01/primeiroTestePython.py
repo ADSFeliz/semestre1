@@ -1,4 +1,4 @@
-# Testando o envio de código, com PR.
+# Testando o envio de código, com PR em uma nova branch.
 nome = input("Informe seu nome: ")
 idade = input("Informe sua idade: ")
 altura = input("Informe sua altura: ")
