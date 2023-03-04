@@ -1,8 +1,3 @@
-a = 1
-print(type(a))
-a = 1.2
-print(type(a))
-a = "1.2"
-print(type(a))
-a = True
-print(type(a))
+nome = input("Informe seu nome:")
+quantidade = int(input("Informe qual é a quantidade comprada:"))
+precoUni = float(input("Informe qual é o preço do produto:"))
