@@ -1,14 +1,13 @@
 pessoas = int(input("Digite quantas pessoas irão: "))
 pedacos = int(input("Digite quantos pedaços comem em média: "))
 totalPedacos = pessoas * pedacos
-pizza = 12
+fatias = 12
 
-if(totalPedacos%12 == 1):
-    pizzas = totalPedacos//12 + 1
+if(totalPedacos%12 > 0):
+    pizzas = totalPedacos//fatias + 1
     print(f"Irão precisar comprar {pizzas} pizzas.")
 else:
-    pizzas = totalPedacos//12
+    pizzas = totalPedacos//fatias
     print(f"Irão precisar comprar {pizzas} pizzas.")
 
-pizzas = totalPedacos/12
-print(f"Cada pessoa irá comer {pizzas:.2f} pedaços de pizza")
+print(f"Cada pessoa irá comer {pedacos:.2f} pedaços de pizza")
