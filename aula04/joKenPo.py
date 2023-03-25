@@ -1,9 +1,9 @@
 import random
 
-class bcolors: # Definindo as cores por uma classe, não foi estudado ainda. Realizado uma pesquisa para não precisar importar uma função
-    JG1 = '\033[92m' #VERDE
-    JG2 = '\033[93m' #AMARELO
-    RESET = '\033[0m' #RESETAR COR
+# Definindo as cores em variaveis. Realizado uma pesquisa para não precisar importar uma função de cor
+JG1 = '\033[92m' #VERDE
+JG2 = '\033[93m' #AMARELO
+RESET = '\033[0m' #RESETAR COR
 
 def jogar(jogada_jogador_1, jogada_jogador_2): # Função para definir o resultado de cada partida
     if jogada_jogador_1 == jogada_jogador_2:
@@ -18,13 +18,13 @@ def jogar(jogada_jogador_1, jogada_jogador_2): # Função para definir o resulta
 
 def resultadoJogo(pontos_jogador_1, pontos_jogador_2): #Função para definir quem ganhou após a soma dos pontos das 3 partidas
     if pontos_jogador_1 > pontos_jogador_2:
-        return bcolors.JG1 + "Resultado melhor de três: Jogador 1" + bcolors.RESET #Esse "bcolors" é da classe definida ali em cima e o .JG1 ou .RESET está acessando o valor da própria variavel definida na classe. 
+        return JG1 + "Resultado melhor de três: Jogador 1" + RESET #Cores definidas nas variaveis ali em cima. 
     elif pontos_jogador_2 > pontos_jogador_1:
-        return bcolors.JG2 + "Resultado melhor de três: Jogador 2" + bcolors.RESET
+        return JG2 + "Resultado melhor de três: Jogador 2" + RESET
     else:
         return "Resultado melhor de três: Empate"
 
-pontos_jogador_1, pontos_jogador_2 = 0, 0 #Variaveis em tuplas
+pontos_jogador_1, pontos_jogador_2 = 0, 0 #Variaveis em tuplas para guardar o valor do melhor de três
 cont = 0
 while cont < 3: #Uma repetição com condição, irá repetir até o cont ser maior que 3
     jogada_jogador_1 = int(input("Informe a sua jogada: (1) Pedra (2) Papel (3) Tesoura: "))
