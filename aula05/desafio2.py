@@ -14,24 +14,18 @@ def andar(comando,x,y,direcao):
                     x+=1
                 else:
                     x-=1
-        elif(i=="r"):
-            if direcao=="norte":
-                direcao="leste"
-            elif direcao=="sul":
-                direcao="oeste"
-            elif direcao=="leste":
-                direcao="sul"
-            elif direcao=="oeste":
-                direcao="norte"
-        elif(i=="l"):
-            if direcao=="norte":
-                direcao="oeste"
-            elif direcao=="sul":
-                direcao="leste"
-            elif direcao=="leste":
-                direcao="norte"
-            elif direcao=="oeste":
-                direcao="sul"
+        elif(i=="r" and direcao=="norte") or \
+            (i=="l" and direcao=="sul"):
+            direcao="leste"
+        elif(i=="r" and direcao=="sul") or \
+            (i=="l" and direcao=="norte"):
+            direcao="oeste"
+        elif(i=="r" and direcao=="leste") or \
+            (i=="l" and direcao=="oeste"):
+            direcao="sul"
+        elif(i=="r" and direcao=="oeste") or \
+            (i=="l" and direcao=="leste"):
+            direcao="norte"
     return x,y,direcao
 
 x_inicial,y_inicial=7,3
