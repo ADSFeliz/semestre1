@@ -17,7 +17,3 @@ cordenadas = cord1_cord2.split()
 cord1,cord2= cordenadas[0],cordenadas[1]
 
 print(direcao(cord1,cord2))
-
-    
-    
-
